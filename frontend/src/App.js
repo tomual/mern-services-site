@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
 
+import { Grid, Row, Col, Nav, Navbar, NavItem } from 'react-bootstrap';
+
 import Home from './components/Home';
 import Works from './components/Works';
 import Pricing from './components/Pricing';
@@ -40,26 +42,39 @@ class App extends Component {
         }
         return (
             <Router>
-                <div className="App">
-                    Database message: {message}
-
-                    <ul>
-                        <li><Link to="">Home</Link></li>
-                        <li><Link to="works">Works</Link></li>
-                        <li><Link to="pricing">Pricing</Link></li>
-                        <li><Link to="about">About</Link></li>
-                        <li><Link to="contact">Contact</Link></li>
-                    </ul>
-                    
-                    <Route exact path="/" component={Home} />
-                    <Route path="/works" component={Works} />
-                    <Route path="/pricing" component={Pricing} />
-                    <Route path="/about" component={About} />
-                    <Route path="/contact" component={Contact} />
-                </div>
+                <Grid>
+                    <Row>
+                        <Col>
+                            {navbarInstance}
+                            
+                            <Route exact path="/" component={Home} />
+                            <Route path="/works" component={Works} />
+                            <Route path="/pricing" component={Pricing} />
+                            <Route path="/about" component={About} />
+                            <Route path="/contact" component={Contact} />
+                        </Col>
+                    </Row>
+                </Grid>
             </Router>
         );
     }
 }
+
+const navbarInstance = (
+    <Navbar>
+        <Navbar.Header>
+            <Navbar.Brand>
+                <a href="#">React-Bootstrap</a>
+            </Navbar.Brand>
+        </Navbar.Header>
+        <Nav>
+            <NavItem><Link to="">Home</Link></NavItem>
+            <NavItem><Link to="works">Works</Link></NavItem>
+            <NavItem><Link to="pricing">Pricing</Link></NavItem>
+            <NavItem><Link to="about">About</Link></NavItem>
+            <NavItem><Link to="contact">Contact</Link></NavItem>
+        </Nav>
+    </Navbar>
+);
 
 export default App;

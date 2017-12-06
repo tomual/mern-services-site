@@ -6,3 +6,5 @@
 4. FE: npm install axios --save
 5. Run MongoDB
 5. FE: npm install mongoose --save
+6. FE: npm install react-router-dom --save
+7. FE: npm install react-bootstrap --save

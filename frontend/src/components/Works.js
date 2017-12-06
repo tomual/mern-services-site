@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
+import { PageHeader } from 'react-bootstrap';
 
 class Works extends Component {
     render() {
         return (
-            <div>
-                Works
-            </div>
+            <PageHeader>Works</PageHeader>
         );
     }
 }
