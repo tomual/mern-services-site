@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { PageHeader, FormGroup, ControlLabel, FormControl, HelpBlock, Checkbox, Button } from 'react-bootstrap';
 
 class Contact extends Component {
     render() {
         return (
             <div>
-                <PageHeader>Contact</PageHeader>
+                <h1>Contact</h1>
                 {formInstance}
             </div>
         );
@@ -14,44 +13,23 @@ class Contact extends Component {
 
 export default Contact;
 
-function FieldGroup({ id, label, help, ...props }) {
-    return (
-        <FormGroup controlId={id}>
-            <ControlLabel>{label}</ControlLabel>
-            <FormControl {...props} />
-            {help && <HelpBlock>{help}</HelpBlock>}
-        </FormGroup>
-    );
-}
-
-
 const formInstance = (
     <form>
-        <FieldGroup
-            id="formControlsText"
-            type="text"
-            label="Text"
-            placeholder="Enter text"
-        />
-        <FieldGroup
-            id="formControlsEmail"
-            type="email"
-            label="Email address"
-            placeholder="Enter email"
-        />
-
-        <Checkbox checked readOnly>
-            Checkbox
-        </Checkbox>
-
-        <FormGroup controlId="formControlsTextarea">
-            <ControlLabel>Textarea</ControlLabel>
-            <FormControl componentClass="textarea" placeholder="textarea" />
-        </FormGroup>
-
-
-        <Button type="submit">
-            Submit
-        </Button>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" />
+                Check me out
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 );
