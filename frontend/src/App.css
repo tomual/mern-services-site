@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar {
+    background-color: #FFF;
+}
+
+.navbar li.nav-item {
+    margin-left: 20px;
+}
+
+.jumbotron {
+    background-color: #FFF;
+    padding-top: 230px;
+    padding-bottom: 300px;
+}
+
+.jumbotron h1 {
+    width: 400px;
+    font-size: 6rem;
+}
+
+.display-2 {
+    font-size: 4rem;
+}
+
+.jumbotron .lead {
+    width: 400px;
+    opacity: 0.8;
+    line-height: 2rem;
+    margin: 40px 0;
+}
+
+.container.screenie,
+.container.trusted,
+.container.video,
+.container.try {
+    padding-top: 230px;
+    padding-bottom: 300px;
+}
+
+.container.try form {
+    margin: auto;
+    width: 350px;
+}
+
+.form-row .btn-primary {
+    margin-left: 10px;
+}
+
+footer {
+    padding: 100px 0;
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+footer li {
+    list-style-type: none;
+    line-height: 2rem;
+}
+
+.btn-outline-primary {
+    border-width: 2px;
+}
+
+input[type=text] {
+    border-width: 2px;
+}
+
+.btn {
+    padding: .375rem 1rem;
+    font-weight: 600;
+}
