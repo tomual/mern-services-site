@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
 
+html {
+    font-size: 16px;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
 }
 
 .navbar {
@@ -77,4 +82,18 @@ input[type=text] {
 .btn {
     padding: .375rem 1rem;
     font-weight: 600;
+}
+
+.display-2 + p {
+    margin: 1.5rem 0;
+}
+
+.features .col {
+    padding: 24px 96px;
+    margin-bottom: 48px;
+}
+
+.features .glyphicon {
+    font-size: 2rem;
+    margin-bottom: 24px;
 }

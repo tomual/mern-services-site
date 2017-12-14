@@ -16,7 +16,7 @@ class Home extends Component {
                         <div className="col">
                         </div>
                         <div className="col">
-                            <h1 className="display-2">We'll help you get to more people</h1>
+                            <h2 className="display-2">We'll help you get to more people</h2>
                             <p>We provide you with the steps to make your product more accessible.</p>
                             <a href="" className="btn btn-primary">Learn More</a>
                         </div>
@@ -25,7 +25,7 @@ class Home extends Component {
                 <div className="container trusted text-center">
                     <div className="row">
                         <div className="col">
-                            <h1 className="display-2">Trusted by organizations everywhere</h1>
+                            <h2 className="display-2">Trusted by organizations everywhere</h2>
                             <p>We've helped companies from all over the world make their web applications accessible.</p>
                             <a href="" className="btn btn-primary">Learn More</a>
                         </div>
@@ -34,7 +34,7 @@ class Home extends Component {
                 <div className="container video text-center">
                     <div className="row">
                         <div className="col">
-                            <h1 className="display-2">Watch how it happens</h1>
+                            <h2 className="display-2">Watch how it happens</h2>
                             <p>Here's what you can expect from our services.</p>
                         </div>
                     </div>
@@ -42,7 +42,7 @@ class Home extends Component {
                 <div className="container try text-center">
                     <div className="row">
                         <div className="col">
-                            <h1 className="display-2">Try us out today</h1>
+                            <h2 className="display-2">Try us out today</h2>
                             <p>No matter how small or large your application, we can help!</p>
                             {leadInput}
                         </div>
