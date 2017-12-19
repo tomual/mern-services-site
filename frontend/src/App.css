@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+@import '../node_modules/react-modal-video/css/modal-video.min.css';
 
 html {
     font-size: 16px;
@@ -7,6 +9,7 @@ html {
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -15,6 +18,17 @@ body {
 
 .navbar li.nav-item {
     margin-left: 20px;
+}
+
+.navbar-brand {
+    font-family: 'Comfortaa', cursive;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.navbar-brand .glyphicon {
+    color: #007bff;
+    text-shadow: 0px 0px 2px #007bff7a;
 }
 
 .jumbotron {
@@ -47,6 +61,49 @@ body {
     padding-bottom: 300px;
 }
 
+.screenie {
+    color: #FFF;
+}
+
+.purple {
+    background: #17a2b8;
+    color: #FFF;
+}
+
+.blue {
+    background: #007bff;
+    position: relative;
+    top: -100px;
+}
+
+.blue:before {
+    border-bottom: 200px solid #007bff;
+    border-left: 2400px solid transparent;
+    content: "";
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: -200px;
+    width: 0;
+}
+
+.video .play-video {
+    background: #FFF;
+    color: #17a2b8;
+    border: none;
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    font-size: 3em;
+    text-align: center;
+}
+
+.video .play-video .glyphicon {
+    position: relative;
+    top: 4px;
+    left: 4px;
+}
+
 .container.try form {
     margin: auto;
     width: 350px;
@@ -56,7 +113,45 @@ body {
     margin-left: 10px;
 }
 
+.trusted .btn {
+    margin-bottom: 2em;
+}
+
+.trusted .logos .col {
+    height: 160px;
+    width: 160px;
+    position: relative;
+}
+
+.trusted .logos img {
+    max-height: 100%;  
+    max-width: 100%; 
+    width: auto;
+    height: auto;
+    position: absolute;  
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    margin: auto;
+}
+
 footer {
+    background: #343a40;
+    color: #FFF;
+    font-weight: bold;
+}
+
+footer a {
+    color: #FFF;
+    font-weight: normal;
+}
+
+footer a:hover {
+    color: #CCC;
+}
+
+footer > div {
     padding: 100px 0;
 }
 
@@ -96,4 +191,23 @@ input[type=text] {
 .features .glyphicon {
     font-size: 2rem;
     margin-bottom: 24px;
+}
+
+.features .glyphicon-ok {
+    color: #28a745;
+}
+.features .glyphicon-envelope {
+    color: #007bff;
+}
+.features .glyphicon-user {
+    color: #6f42c1;
+}
+.features .glyphicon-signal {
+    color: #dc3545;
+}
+.features .glyphicon-flag {
+    color: #ffc107;
+}
+.features .glyphicon-eye-open {
+    color: #20c997;   
 }

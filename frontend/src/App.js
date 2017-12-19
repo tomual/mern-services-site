@@ -64,7 +64,7 @@ class App extends Component {
 
 const navbarInstance = (
     <nav className="navbar navbar-expand-lg navbar-light">
-        <a className="navbar-brand" href="#">Mina</a>
+        <a className="navbar-brand" href="#"><span class="glyphicon glyphicon-tint" aria-hidden="true"></span> Mina</a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
         </button>
@@ -98,43 +98,45 @@ const navbarInstance = (
 );
 
 const footerInstance = (
-    <footer className="container">
-        <div className="row">
-            <div className="col">
-                <div>Mina</div>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Works</a></li>
-                    <li><a href="">About</a></li>
-                </ul>
-            </div>
-            <div className="col">
-                <div>About Us</div>
-                <ul>
-                    <li><a href="">Company</a></li>
-                    <li><a href="">Jobs</a></li>
-                    <li><a href="">Press</a></li>
-                    <li><a href="">Blog</a></li>
-                </ul>
-            </div>
-            <div className="col">
-                <div>Accessibility</div>
-                <ul>
-                    <li><a href="">Typography</a></li>
-                    <li><a href="">Colors</a></li>
-                    <li><a href="">Screen Readers</a></li>
-                    <li><a href="">Verbiage</a></li>
-                </ul>
-            </div>
-            <div className="col">
-                <div>Resources</div>
-                <ul>
-                    <li><a href="">Mina Guide</a></li>
-                    <li><a href="">Support</a></li>
-                    <li><a href="">Process</a></li>
-                    <li><a href="">Developers</a></li>
-                </ul>
+    <footer>
+        <div className="container">
+            <div className="row">
+                <div className="col">
+                    <div>Mina</div>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Works</a></li>
+                        <li><a href="">About</a></li>
+                    </ul>
+                </div>
+                <div className="col">
+                    <div>About Us</div>
+                    <ul>
+                        <li><a href="">Company</a></li>
+                        <li><a href="">Jobs</a></li>
+                        <li><a href="">Press</a></li>
+                        <li><a href="">Blog</a></li>
+                    </ul>
+                </div>
+                <div className="col">
+                    <div>Accessibility</div>
+                    <ul>
+                        <li><a href="">Typography</a></li>
+                        <li><a href="">Colors</a></li>
+                        <li><a href="">Screen Readers</a></li>
+                        <li><a href="">Verbiage</a></li>
+                    </ul>
+                </div>
+                <div className="col">
+                    <div>Resources</div>
+                    <ul>
+                        <li><a href="">Mina Guide</a></li>
+                        <li><a href="">Support</a></li>
+                        <li><a href="">Process</a></li>
+                        <li><a href="">Developers</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>

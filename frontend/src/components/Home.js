@@ -1,6 +1,20 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom'
+import ModalVideo from 'react-modal-video'
 
 class Home extends Component {
+ 
+    constructor () {
+        super();
+        this.state = {
+          isOpen: false
+        };
+        this.openModal = this.openModal.bind(this);
+    }
+
+    openModal () {
+        this.setState({isOpen: true});
+    }
     render() {
         return (
             <div>
@@ -11,14 +25,16 @@ class Home extends Component {
                         {leadInput}
                     </div>
                 </div>
-                <div className="container screenie">
-                    <div className="row">
-                        <div className="col">
-                        </div>
-                        <div className="col">
-                            <h2 className="display-2">We'll help you get to more people</h2>
-                            <p>We provide you with the steps to make your product more accessible.</p>
-                            <a href="" className="btn btn-primary">Learn More</a>
+                <div className="blue">
+                    <div className="container screenie">
+                        <div className="row">
+                            <div className="col">
+                            </div>
+                            <div className="col">
+                                <h2 className="display-2">We'll help you get to more people</h2>
+                                <p>We provide you with the steps to make your product more accessible.</p>
+                                <a href="" className="btn btn-primary">Learn More</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -28,14 +44,47 @@ class Home extends Component {
                             <h2 className="display-2">Trusted by organizations everywhere</h2>
                             <p>We've helped companies from all over the world make their web applications accessible.</p>
                             <a href="" className="btn btn-primary">Learn More</a>
+
+                            <div className="row logos">
+                                <div className="col">
+                                    <img src="images/logo-1.svg" />
+                                </div>
+                                <div className="col">
+                                    <img src="images/logo-2.svg" />
+                                </div>
+                                <div className="col">
+                                    <img src="images/logo-3.svg" />
+                                </div>
+                                <div className="col">
+                                    <img src="images/logo-4.svg" />
+                                </div>
+                            </div>
+                            <div className="row logos">
+                                <div className="col">
+                                    <img src="images/logo-8.svg" />
+                                </div>
+                                <div className="col">
+                                    <img src="images/logo-5.svg" />
+                                </div>
+                                <div className="col">
+                                    <img src="images/logo-6.svg" />
+                                </div>
+                                <div className="col">
+                                    <img src="images/logo-7.svg" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div className="container video text-center">
-                    <div className="row">
-                        <div className="col">
-                            <h2 className="display-2">Watch how it happens</h2>
-                            <p>Here's what you can expect from our services.</p>
+                <div className="purple">
+                    <div className="container video text-center">
+                        <div className="row">
+                            <div className="col">
+                                <h2 className="display-2">Watch how it happens</h2>
+                                <p>Here's what you can expect from our services.</p>
+                                <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId='L61p2uyiMSo' onClose={() => this.setState({isOpen: false})} />
+                                <button className="play-video" onClick={this.openModal}><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button>
+                            </div>
                         </div>
                     </div>
                 </div>
