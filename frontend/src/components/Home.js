@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom'
-import ModalVideo from 'react-modal-video'
+import ModalVideo from 'react-modal-video';
 
 class Home extends Component {
  
@@ -47,30 +46,30 @@ class Home extends Component {
 
                             <div className="row logos">
                                 <div className="col">
-                                    <img src="images/logo-1.svg" />
+                                    <img src="images/logo-1.svg" alt="logo"/>
                                 </div>
                                 <div className="col">
-                                    <img src="images/logo-2.svg" />
+                                    <img src="images/logo-2.svg" alt="logo"/>
                                 </div>
                                 <div className="col">
-                                    <img src="images/logo-3.svg" />
+                                    <img src="images/logo-3.svg" alt="logo"/>
                                 </div>
                                 <div className="col">
-                                    <img src="images/logo-4.svg" />
+                                    <img src="images/logo-4.svg" alt="logo"/>
                                 </div>
                             </div>
                             <div className="row logos">
                                 <div className="col">
-                                    <img src="images/logo-8.svg" />
+                                    <img src="images/logo-8.svg" alt="logo"/>
                                 </div>
                                 <div className="col">
-                                    <img src="images/logo-5.svg" />
+                                    <img src="images/logo-5.svg" alt="logo"/>
                                 </div>
                                 <div className="col">
-                                    <img src="images/logo-6.svg" />
+                                    <img src="images/logo-6.svg" alt="logo"/>
                                 </div>
                                 <div className="col">
-                                    <img src="images/logo-7.svg" />
+                                    <img src="images/logo-7.svg" alt="logo"/>
                                 </div>
                             </div>
                         </div>
@@ -83,7 +82,7 @@ class Home extends Component {
                                 <h2 className="display-2">Watch how it happens</h2>
                                 <p>Here's what you can expect from our services.</p>
                                 <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId='L61p2uyiMSo' onClose={() => this.setState({isOpen: false})} />
-                                <button className="play-video" onClick={this.openModal}><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button>
+                                <button className="play-video" onClick={this.openModal}><span className="glyphicon glyphicon-play" aria-hidden="true"></span></button>
                             </div>
                         </div>
                     </div>

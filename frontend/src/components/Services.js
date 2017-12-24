@@ -44,34 +44,34 @@ class Services extends Component {
                         <div className="col">
                             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                             <p>Some words about this specific feature. There's an icon that goes above it.</p>
-                            <a href="#">Learn More</a>
+                            <a href="/">Learn More</a>
                         </div>
                         <div className="col">
                             <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
                             <p>Some words about this specific feature. There's an icon that goes above it.</p>
-                            <a href="#">Learn More</a>
+                            <a href="/">Learn More</a>
                         </div>
                         <div className="col">
                             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                             <p>Some words about this specific feature. There's an icon that goes above it.</p>
-                            <a href="#">Learn More</a>
+                            <a href="/">Learn More</a>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col">
                             <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
                             <p>Some words about this specific feature. There's an icon that goes above it.</p>
-                            <a href="#">Learn More</a>
+                            <a href="/">Learn More</a>
                         </div>
                         <div className="col">
                             <span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
                             <p>Some words about this specific feature. There's an icon that goes above it.</p>
-                            <a href="#">Learn More</a>
+                            <a href="/">Learn More</a>
                         </div>
                         <div className="col">
                             <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                             <p>Some words about this specific feature. There's an icon that goes above it.</p>
-                            <a href="#">Learn More</a>
+                            <a href="/">Learn More</a>
                         </div>
                     </div>
 

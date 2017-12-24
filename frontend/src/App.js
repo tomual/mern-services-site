@@ -14,8 +14,10 @@ class App extends Component {
         super();
 
         this.state = {
-            message: ''
+            welcome: ''
         };
+
+        this.sendContact = this.sendContact.bind(this);
     }
 
     componentWillMount() {
@@ -25,7 +27,16 @@ class App extends Component {
     getHome() {
         axios.get('http://localhost:3001/')
         .then((response) => {
-            this.setState({message: response.data});
+            this.setState({welcome: response.data});
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+    }
+
+    sendContact(form) {
+        axios.post('http://localhost:3001/', form)
+        .then((response) => {
             console.log(response);
         })
         .catch((error) => {
@@ -34,9 +45,9 @@ class App extends Component {
     }
 
     render() {
-        let message = '';
-        if (this.state.message) {
-            message = this.state.message;
+        let welcome = '';
+        if (this.state.welcome) {
+            welcome = this.state.welcome;
         }
         return (
             <Router>
@@ -54,7 +65,7 @@ class App extends Component {
                     <Route path="/services-1" component={Services} />
                     <Route path="/services-2" component={Services} />
                     <Route path="/about" component={About} />
-                    <Route path="/contact" component={Contact} />
+                    <Route path="/contact" component={() => (<Contact onSubmit={this.sendContact} />)} />
                     {footerInstance}
                 </div>
             </Router>
@@ -64,7 +75,7 @@ class App extends Component {
 
 const navbarInstance = (
     <nav className="navbar navbar-expand-lg navbar-light">
-        <a className="navbar-brand" href="#"><span class="glyphicon glyphicon-tint" aria-hidden="true"></span> Mina</a>
+        <a className="navbar-brand" href="/"><span className="glyphicon glyphicon-tint" aria-hidden="true"></span> Mina</a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
         </button>
@@ -75,7 +86,7 @@ const navbarInstance = (
                     <Link to="" className="nav-link">Home</Link>
                 </li>
                 <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Services
                     </a>
                     <div className="dropdown-menu" aria-labelledby="navbarDropdown">

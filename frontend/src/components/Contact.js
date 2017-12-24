@@ -1,6 +1,37 @@
 import React, { Component } from 'react';
 
 class Contact extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            email: '',
+            dropdown: 'sales',
+            message: ''
+        };
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(event) {
+        const target = event.target;
+        const value= target.value;
+        const name = target.name;
+
+        this.setState({
+            [name]: value
+        });
+    }
+
+    handleSubmit(event) {
+
+        this.props.onSubmit(this.state);
+
+        event.preventDefault();
+    }
+
     render() {
         return (
             <div>
@@ -8,7 +39,29 @@ class Contact extends Component {
                     <div className="row">
                         <div className="col">
                             <h1>Contact</h1>
-                            {formInstance}
+                            <form onSubmit={this.handleSubmit}>
+                                <div className="form-group">
+                                    <label htmlFor="name">Name</label>
+                                    <input type="text" className="form-control" name="name" value={this.state.name} onChange={this.handleChange} />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="name">Email address</label>
+                                    <input type="text" className="form-control" name="email" value={this.state.email} onChange={this.handleChange} />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="dropdown">What can we help you with?</label>
+                                    <select className="form-control" name="dropdown" value={this.state.dropdown} onChange={this.handleChange}>
+                                        <option value="sales">Sales inquiry</option>
+                                        <option value="quote">Quote request</option>
+                                        <option value="servoce">Service registration</option>
+                                    </select>
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="message">Message</label>
+                                    <textarea className="form-control" name="message" rows="5" value={this.state.message} onChange={this.handleChange} />
+                                </div>
+                                <button type="submit" className="btn btn-primary">Submit</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -18,24 +71,3 @@ class Contact extends Component {
 }
 
 export default Contact;
-
-const formInstance = (
-    <form>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
-        </div>
-        <div class="form-check">
-            <label class="form-check-label">
-                <input type="checkbox" class="form-check-input" />
-                Check me out
-            </label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-);
