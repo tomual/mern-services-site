@@ -8,3 +8,4 @@
 5. FE: npm install mongoose --save
 6. FE: npm install react-router-dom --save
 7. FE: npm install react-bootstrap --save
+8. BE: npm install nodemon -g
