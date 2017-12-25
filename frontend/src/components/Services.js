@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
+import LeadForm from './LeadForm';
 
 class Services extends Component {
+ 
+    constructor(props) {
+        super(props);
+        this.handleEmailSubmit = this.handleEmailSubmit.bind(this);
+    }
+
+    handleEmailSubmit(email) {
+        this.props.sendToContact(email);
+    }
+
     render() {
         return (
             <div>
@@ -8,7 +19,7 @@ class Services extends Component {
                     <div className="jumbotron">
                         <h1 className="display-1">Service One Header</h1>
                         <p className="lead">We'll help your web application easy to read for a wider variety of people</p>
-                        {leadInput}
+                        <LeadForm handleEmailSubmit={this.handleEmailSubmit} />
                     </div>
                 </div>
                 <div className="container screenie">
@@ -42,34 +53,34 @@ class Services extends Component {
                     </div>
                     <div className="row">
                         <div className="col">
-                            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                            <span className="glyphicon glyphicon-ok" aria-hidden="true"></span>
                             <p>Some words about this specific feature. There's an icon that goes above it.</p>
                             <a href="/">Learn More</a>
                         </div>
                         <div className="col">
-                            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                            <span className="glyphicon glyphicon-envelope" aria-hidden="true"></span>
                             <p>Some words about this specific feature. There's an icon that goes above it.</p>
                             <a href="/">Learn More</a>
                         </div>
                         <div className="col">
-                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                            <span className="glyphicon glyphicon-user" aria-hidden="true"></span>
                             <p>Some words about this specific feature. There's an icon that goes above it.</p>
                             <a href="/">Learn More</a>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col">
-                            <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
+                            <span className="glyphicon glyphicon-signal" aria-hidden="true"></span>
                             <p>Some words about this specific feature. There's an icon that goes above it.</p>
                             <a href="/">Learn More</a>
                         </div>
                         <div className="col">
-                            <span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
+                            <span className="glyphicon glyphicon-flag" aria-hidden="true"></span>
                             <p>Some words about this specific feature. There's an icon that goes above it.</p>
                             <a href="/">Learn More</a>
                         </div>
                         <div className="col">
-                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                            <span className="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                             <p>Some words about this specific feature. There's an icon that goes above it.</p>
                             <a href="/">Learn More</a>
                         </div>
@@ -81,7 +92,7 @@ class Services extends Component {
                         <div className="col">
                             <h2 className="display-2">Try us out today</h2>
                             <p>No matter how small or large your application, we can help!</p>
-                            {leadInput}
+                            <LeadForm handleEmailSubmit={this.handleEmailSubmit} />
                         </div>
                     </div>
                 </div>
@@ -91,17 +102,3 @@ class Services extends Component {
 }
 
 export default Services;
-
-const leadInput = (
-    <form>
-        <div className="form-row align-items-center">
-            <div >
-                <label className="sr-only" htmlFor="inlineFormInputName">Name</label>
-                <input type="text" className="form-control mb-2 mb-sm-0" id="inlineFormInputName" placeholder="name@email.com" />
-            </div>
-            <div>
-                <button type="submit" className="btn btn-primary">Get Started</button>
-            </div>
-        </div>
-    </form>
-);

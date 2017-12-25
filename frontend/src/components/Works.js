@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
+import LeadForm from './LeadForm';
 
 class Works extends Component {
+ 
+    constructor(props) {
+        super(props);
+        this.handleEmailSubmit = this.handleEmailSubmit.bind(this);
+    }
+
+    handleEmailSubmit(email) {
+        this.props.sendToContact(email);
+    }
+
     render() {
         return (
             <div>
@@ -51,7 +62,7 @@ class Works extends Component {
                         <div className="col">
                             <h2 className="display-2">Try us out today</h2>
                             <p>No matter how small or large your application, we can help!</p>
-                            {leadInput}
+                            <LeadForm handleEmailSubmit={this.handleEmailSubmit} />
                         </div>
                     </div>
                 </div>
@@ -61,17 +72,3 @@ class Works extends Component {
 }
 
 export default Works;
-
-const leadInput = (
-    <form>
-        <div className="form-row align-items-center">
-            <div >
-                <label className="sr-only" htmlFor="inlineFormInputName">Name</label>
-                <input type="text" className="form-control mb-2 mb-sm-0" id="inlineFormInputName" placeholder="name@email.com" />
-            </div>
-            <div>
-                <button type="submit" className="btn btn-primary">Get Started</button>
-            </div>
-        </div>
-    </form>
-);

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Route, Redirect } from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
 
@@ -10,14 +10,15 @@ import About from './components/About';
 import Contact from './components/Contact';
 
 class App extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             welcome: ''
         };
 
         this.sendContact = this.sendContact.bind(this);
+        this.sendToContact = this.sendToContact.bind(this);
     }
 
     componentWillMount() {
@@ -44,6 +45,26 @@ class App extends Component {
         });
     }
 
+    sendToContact(email) {
+        // No
+        //return <Redirect to='/contact' />
+
+        // Nope
+        //this.context.history.push('/contact');
+
+        // No no
+        //browserHistory.push("/path");
+
+        // Not this either
+        //this.context.router.push('/contact');
+
+        // Nope
+        //this.props.history.push('/contact');
+
+        // What the fuck
+        window.location.href = "/contact?email=" + email;
+    }
+
     render() {
         let welcome = '';
         if (this.state.welcome) {
@@ -60,11 +81,11 @@ class App extends Component {
                         </div>
                     </div>               
                     
-                    <Route exact path="/" component={Home} />
-                    <Route path="/works" component={Works} />
-                    <Route path="/services-1" component={Services} />
-                    <Route path="/services-2" component={Services} />
-                    <Route path="/about" component={About} />
+                    <Route exact path="/" component={() => (<Home sendToContact={this.sendToContact} />)} />
+                    <Route path="/works" component={() => (<Works sendToContact={this.sendToContact} />)} />
+                    <Route path="/services-1" component={() => (<Services sendToContact={this.sendToContact} />)} />
+                    <Route path="/services-2" component={() => (<Services sendToContact={this.sendToContact} />)} />
+                    <Route path="/about" component={() => (<About sendToContact={this.sendToContact} />)} />
                     <Route path="/contact" component={() => (<Contact onSubmit={this.sendContact} />)} />
                     {footerInstance}
                 </div>

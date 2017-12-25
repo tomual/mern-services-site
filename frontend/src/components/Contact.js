@@ -15,6 +15,13 @@ class Contact extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentWillMount() {
+        // I'm so done
+        const query = window.location.search;
+        const email = window.location.search.replace('?email=', '');
+        this.setState({email: email});
+    }
+
     handleChange(event) {
         const target = event.target;
         const value= target.value;
@@ -26,9 +33,7 @@ class Contact extends Component {
     }
 
     handleSubmit(event) {
-
         this.props.onSubmit(this.state);
-
         event.preventDefault();
     }
 

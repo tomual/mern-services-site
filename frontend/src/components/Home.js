@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
 import ModalVideo from 'react-modal-video';
+import LeadForm from './LeadForm';
 
 class Home extends Component {
  
-    constructor () {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
           isOpen: false
         };
         this.openModal = this.openModal.bind(this);
+        this.handleEmailSubmit = this.handleEmailSubmit.bind(this);
     }
 
-    openModal () {
+    openModal() {
         this.setState({isOpen: true});
     }
+
+    handleEmailSubmit(email) {
+        this.props.sendToContact(email);
+    }
+
     render() {
         return (
             <div>
@@ -21,7 +28,7 @@ class Home extends Component {
                     <div className="jumbotron">
                         <h1 className="display-1">Make it Accessible</h1>
                         <p className="lead">We'll help your web application easy to read for a wider variety of people</p>
-                        {leadInput}
+                        <LeadForm handleEmailSubmit={this.handleEmailSubmit} />
                     </div>
                 </div>
                 <div className="blue">
@@ -92,7 +99,7 @@ class Home extends Component {
                         <div className="col">
                             <h2 className="display-2">Try us out today</h2>
                             <p>No matter how small or large your application, we can help!</p>
-                            {leadInput}
+                            <LeadForm />
                         </div>
                     </div>
                 </div>
@@ -102,17 +109,3 @@ class Home extends Component {
 }
 
 export default Home;
-
-const leadInput = (
-    <form>
-        <div className="form-row align-items-center">
-            <div >
-                <label className="sr-only" htmlFor="inlineFormInputName">Name</label>
-                <input type="text" className="form-control mb-2 mb-sm-0" id="inlineFormInputName" placeholder="name@email.com" />
-            </div>
-            <div>
-                <button type="submit" className="btn btn-primary">Get Started</button>
-            </div>
-        </div>
-    </form>
-);
