@@ -7,7 +7,7 @@ class Contact extends Component {
         this.state = {
             name: '',
             email: '',
-            dropdown: 'sales',
+            dropdown: 'Sales inquiry',
             message: ''
         };
 
@@ -51,9 +51,9 @@ class Contact extends Component {
                                 <div className="form-group">
                                     <label htmlFor="dropdown">What can we help you with?</label>
                                     <select className="form-control" name="dropdown" value={this.state.dropdown} onChange={this.handleChange}>
-                                        <option value="sales">Sales inquiry</option>
-                                        <option value="quote">Quote request</option>
-                                        <option value="servoce">Service registration</option>
+                                        <option>Sales inquiry</option>
+                                        <option>Quote request</option>
+                                        <option>Service registration</option>
                                     </select>
                                 </div>
                                 <div className="form-group">

@@ -1,8 +1,12 @@
+var env = require('dotenv').config();
 var express = require('express');
 var app = express();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
-mongoose.connect('mongodb://localhost:27017/services-site');
+var mailer = require('express-mailer');
+var jade = require('jade');
+
+mongoose.connect(process.env.DB_HOST);
 
 app.use(bodyParser.json());
 
@@ -26,6 +30,20 @@ var submissionsSchema = mongoose.Schema({
 var Messages = mongoose.model('Messages', messagesSchema);
 var Submissions = mongoose.model('Submissions', submissionsSchema);
 
+app.set('views', __dirname + '/views');
+app.set('view engine', 'jade');
+mailer.extend(app, {
+    from: 'huce00@gmail.com',
+    host: 'smtp.gmail.com',
+    secureConnection: true, 
+    port: 465, 
+    transportMethod: 'SMTP',
+    auth: {
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASS
+    }
+});
+
 app.all('/*', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
@@ -48,11 +66,24 @@ app.post('/', (req, res) => {
     });
     submission.save((error, submission) => {
        if (error) {
-           res.status(500).send({error: 'Failed to submit form'});
-           console.log(error);
+            res.status(500).send({error: 'Failed to submit form'});
+            console.log(error);
        } else {
-           res.send(submission);
-           console.log(submission);
+            res.send(submission);
+            console.log(submission.name);
+            app.mailer.send('email', {
+                to: process.env.MAIL_RECEIVER, // REQUIRED. This can be a comma delimited string just like a normal email to field.    
+                subject: process.env.MAIL_SUBJECT, // REQUIRED. 
+                name: submission.name,
+                email: submission.email,
+                dropdown: submission.dropdown,
+                message: submission.message,
+            }, function (err) {
+                if (err) {
+                    // handle error 
+                    console.log(err);
+                }
+            });
        }
     });
 });

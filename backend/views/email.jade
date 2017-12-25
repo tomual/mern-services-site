@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    meta(http-equiv = 'Content-Type', content = 'text/html; charset=UTF-8')
+    title= subject
+    body
+      h1.h1 Contact Form Submission
+      - console.log(content)
+      - console.log(name)
+      p
+        b Name: 
+        | #{name}
+      p
+        b Email: 
+        | #{email}
+      p
+        b Reason: 
+        | #{dropdown}
+      p
+        b Message: 
+      p #{message}
