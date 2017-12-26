@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var mailer = require('express-mailer');
 var jade = require('jade');
 
-mongoose.connect(process.env.DB_HOST);
+mongoose.connect('mongodb://' + process.env.DB_USER + ':' + process.env.DB_PASS + '@' + process.env.DB_HOST);
 
 app.use(bodyParser.json());
 
