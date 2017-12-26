@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
 
@@ -8,36 +8,19 @@ import Works from './components/Works';
 import Services from './components/Services';
 import About from './components/About';
 import Contact from './components/Contact';
+import Thankyou from './components/Thankyou';
 
 class App extends Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            welcome: ''
-        };
-
         this.sendContact = this.sendContact.bind(this);
         this.sendToContact = this.sendToContact.bind(this);
-    }
-
-    componentWillMount() {
-        this.getHome();
-    }
-
-    getHome() {
-        axios.get('http://localhost:3001/')
-        .then((response) => {
-            this.setState({welcome: response.data});
-        })
-        .catch((error) => {
-            console.log(error);
-        });
     }
 
     sendContact(form) {
         axios.post('http://localhost:3001/', form)
         .then((response) => {
+            window.location.href = "/thankyou";
             console.log(response);
         })
         .catch((error) => {
@@ -66,10 +49,6 @@ class App extends Component {
     }
 
     render() {
-        let welcome = '';
-        if (this.state.welcome) {
-            welcome = this.state.welcome;
-        }
         return (
             <Router>
                 <div>
@@ -87,6 +66,7 @@ class App extends Component {
                     <Route path="/services-2" component={() => (<Services sendToContact={this.sendToContact} />)} />
                     <Route path="/about" component={() => (<About sendToContact={this.sendToContact} />)} />
                     <Route path="/contact" component={() => (<Contact onSubmit={this.sendContact} />)} />
+                    <Route path="/thankyou" component={() => (<Thankyou />)} />
                     {footerInstance}
                 </div>
             </Router>
@@ -133,7 +113,7 @@ const footerInstance = (
     <footer>
         <div className="container">
             <div className="row">
-                <div className="col">
+                <div className="col-sm-6 col-lg-3">
                     <div>Mina</div>
                     <ul>
                         <li><a href="">Home</a></li>
@@ -142,7 +122,7 @@ const footerInstance = (
                         <li><a href="">About</a></li>
                     </ul>
                 </div>
-                <div className="col">
+                <div className="col-sm-6 col-lg-3">
                     <div>About Us</div>
                     <ul>
                         <li><a href="">Company</a></li>
@@ -151,7 +131,7 @@ const footerInstance = (
                         <li><a href="">Blog</a></li>
                     </ul>
                 </div>
-                <div className="col">
+                <div className="col-sm-6 col-lg-3">
                     <div>Accessibility</div>
                     <ul>
                         <li><a href="">Typography</a></li>
@@ -160,7 +140,7 @@ const footerInstance = (
                         <li><a href="">Verbiage</a></li>
                     </ul>
                 </div>
-                <div className="col">
+                <div className="col-sm-6 col-lg-3">
                     <div>Resources</div>
                     <ul>
                         <li><a href="">Mina Guide</a></li>

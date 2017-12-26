@@ -32,34 +32,34 @@ class Services extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col">
+                        <div className="col-lg-4 col-sm-12">
                             <span className="glyphicon glyphicon-ok" aria-hidden="true"></span>
                             <p>Some words about this specific feature. There's an icon that goes above it.</p>
                             <a href="/">Learn More</a>
                         </div>
-                        <div className="col">
+                        <div className="col-lg-4 col-sm-12">
                             <span className="glyphicon glyphicon-envelope" aria-hidden="true"></span>
                             <p>Some words about this specific feature. There's an icon that goes above it.</p>
                             <a href="/">Learn More</a>
                         </div>
-                        <div className="col">
+                        <div className="col-lg-4 col-sm-12">
                             <span className="glyphicon glyphicon-user" aria-hidden="true"></span>
                             <p>Some words about this specific feature. There's an icon that goes above it.</p>
                             <a href="/">Learn More</a>
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col">
+                        <div className="col-lg-4 col-sm-12">
                             <span className="glyphicon glyphicon-signal" aria-hidden="true"></span>
                             <p>Some words about this specific feature. There's an icon that goes above it.</p>
                             <a href="/">Learn More</a>
                         </div>
-                        <div className="col">
+                        <div className="col-lg-4 col-sm-12">
                             <span className="glyphicon glyphicon-flag" aria-hidden="true"></span>
                             <p>Some words about this specific feature. There's an icon that goes above it.</p>
                             <a href="/">Learn More</a>
                         </div>
-                        <div className="col">
+                        <div className="col-lg-4 col-sm-12">
                             <span className="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                             <p>Some words about this specific feature. There's an icon that goes above it.</p>
                             <a href="/">Learn More</a>

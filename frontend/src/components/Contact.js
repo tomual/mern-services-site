@@ -16,8 +16,6 @@ class Contact extends Component {
     }
 
     componentWillMount() {
-        // I'm so done
-        const query = window.location.search;
         const email = window.location.search.replace('?email=', '');
         this.setState({email: email});
     }
@@ -43,8 +41,9 @@ class Contact extends Component {
                 <div className="container contact">
                     <div className="row">
                         <div className="col">
-                            <h1>Contact</h1>
+                            <h1>Get Started</h1>
                             <form onSubmit={this.handleSubmit}>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                 <div className="form-group">
                                     <label htmlFor="name">Name</label>
                                     <input type="text" className="form-control" name="name" value={this.state.name} onChange={this.handleChange} />

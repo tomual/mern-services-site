@@ -114,6 +114,7 @@ body {
     background: #007bff;
     position: relative;
     top: -100px;
+    z-index: -1;
 }
 
 .blue:before {
@@ -157,7 +158,7 @@ body {
     margin-bottom: 2em;
 }
 
-.trusted .logos .col {
+.trusted .logos [class^=col-] {
     height: 160px;
     width: 160px;
     position: relative;
@@ -339,4 +340,162 @@ footer li {
 }
 .features .glyphicon-eye-open {
     color: #20c997;   
+}
+
+.container.thankyou {
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.container.thankyou p {
+    margin: 2em 0;
+}
+
+@media (max-width: 576px) {
+    .jumbotron h1 {
+        width: 100%;
+        font-size: 3rem;
+    }
+
+    .jumbotron {
+        padding: 0;
+        background-color: transparent;
+        padding-top: 50px;
+        padding-bottom: 150px;
+    }
+
+    .jumbotron .lead {
+        width: 100%;
+    }
+
+    .form-row .btn-primary {
+        margin: 0;
+    }
+
+    .screenie img {
+        display: none;
+    }
+
+    .display-2 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 0 30px;
+    }
+
+    .container.screenie {
+        padding-bottom: 100px;
+    }
+
+    .container.screenie, .container.trusted, .container.video, .container.try, .container.works-hero {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .trusted .logos [class^=col-] {
+        width: 100%;
+    }
+
+    .container.try form {
+        width: auto;
+    }
+
+    .container.try form div {
+        width: 100%;
+    }
+
+    footer .row > div {
+        padding-top: 2em;
+    }
+
+    footer {
+        padding-bottom: 2em;
+    }
+
+    .jumbotron-services img {
+        position: static;
+        display: none;
+    }
+
+    .jumbotron-services h1 {
+        width: auto;
+        font-size: 2rem;
+    }
+
+    .features .col {
+        padding: 0;
+        margin-bottom: 48px;
+    }
+
+    .features .glyphicon {
+        margin-top: 24px;
+        display: block;
+        text-align: center;
+    }
+
+    .work .display-4 {
+        font-size: 1.5em;
+        margin-bottom: 1em;
+    }
+
+    .work-one, .work-two, .work-three {
+        padding-top: 100px;
+        padding-bottom: 120px;
+    }
+
+    .work img {
+        -webkit-box-shadow: 0px 0px 50px rgba(0,0,0,0.4);
+        box-shadow: 0px 0px 50px rgba(0,0,0,0.4);
+        width: 140%;
+        position: relative;
+        top: 30px;
+    }
+
+    .about .col-lg-6 {
+        padding-right: 0;
+    }
+
+    .display-4 {
+        font-size: 2em;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+
+    .about img {
+        margin-top: 2em;
+    }
+
+    .workplace img {
+        position: static;
+        width: 100%;
+    }
+
+    .container.workplace {
+        padding: 100px 0;
+    }
+
+    .workplace .col-lg-4 {
+        padding: 60px 30px;
+    }
+
+    .gallery img {
+        margin-bottom: 2em;
+        width: 100%;
+    }
+
+    .contact h1 {
+        margin-bottom: 50px;
+    }
+
+    .contact form {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 100px;
+    }    
+
+    .container.thankyou {
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
 }

@@ -34,10 +34,10 @@ class Home extends Component {
                 <div className="blue">
                     <div className="container screenie">
                         <div className="row">
-                            <div className="col">
+                            <div className="col-lg-6 col-sm-12">
                                 <img src="images/screenshot.png" alt="screenshot"/>
                             </div>
-                            <div className="col">
+                            <div className="col-lg-6 col-sm-12">
                                 <h2 className="display-2">We'll help you get to more people</h2>
                                 <p>We provide you with the steps to make your product more accessible.</p>
                                 <a href="" className="btn btn-primary">Learn More</a>
@@ -53,30 +53,30 @@ class Home extends Component {
                             <a href="" className="btn btn-primary">Learn More</a>
 
                             <div className="row logos">
-                                <div className="col">
+                                <div className="col-lg-3 col-sm-6">
                                     <img src="images/logo-1.svg" alt="logo"/>
                                 </div>
-                                <div className="col">
+                                <div className="col-lg-3 col-sm-6">
                                     <img src="images/logo-2.svg" alt="logo"/>
                                 </div>
-                                <div className="col">
+                                <div className="col-lg-3 col-sm-6">
                                     <img src="images/logo-3.svg" alt="logo"/>
                                 </div>
-                                <div className="col">
+                                <div className="col-lg-3 col-sm-6">
                                     <img src="images/logo-4.svg" alt="logo"/>
                                 </div>
                             </div>
                             <div className="row logos">
-                                <div className="col">
+                                <div className="col-lg-3 col-sm-6">
                                     <img src="images/logo-8.svg" alt="logo"/>
                                 </div>
-                                <div className="col">
+                                <div className="col-lg-3 col-sm-6">
                                     <img src="images/logo-5.svg" alt="logo"/>
                                 </div>
-                                <div className="col">
+                                <div className="col-lg-3 col-sm-6">
                                     <img src="images/logo-6.svg" alt="logo"/>
                                 </div>
-                                <div className="col">
+                                <div className="col-lg-3 col-sm-6">
                                     <img src="images/logo-7.svg" alt="logo"/>
                                 </div>
                             </div>

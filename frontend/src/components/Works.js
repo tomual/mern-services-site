@@ -27,12 +27,12 @@ class Works extends Component {
                 <div className="work work-one">
                     <div className="container">
                         <div className="row">
-                            <div className="col">
+                            <div className="col-lg-6 col-sm-12">
                                 <h2 className="display-4">Northwest Computing Hosting Dashboard</h2>
                                 <p>We've helped companies from all over the world make their web applications accessible.</p>
                                 <a href="" className="btn btn-outline-light">Visit Site</a>
                             </div>
-                            <div className="col">
+                            <div className="col-lg-6 col-sm-12">
                                 <img src="images/work1.jpg" alt="screenshot"/>
                             </div>
                         </div>
@@ -41,12 +41,12 @@ class Works extends Component {
                 <div className="work work-two">
                     <div className="container">
                         <div className="row">
-                            <div className="col">
+                            <div className="col-lg-6 col-sm-12">
                                 <h2 className="display-4">G.E. Works Promotional Landing Page</h2>
                                 <p>We've helped companies from all over the world make their web applications accessible.</p>
                                 <a href="" className="btn btn-outline-light">Visit Site</a>
                             </div>
-                            <div className="col">
+                            <div className="col-lg-6 col-sm-12">
                                 <img src="images/work2.jpg" alt="screenshot"/>
                             </div>
                         </div>
@@ -55,12 +55,12 @@ class Works extends Component {
                 <div className="work work-three">
                     <div className="container">
                         <div className="row">
-                            <div className="col">
+                            <div className="col-lg-6 col-sm-12">
                                 <h2 className="display-4">Association for the Blind Social Networking Site</h2>
                                 <p>We've helped companies from all over the world make their web applications accessible.</p>
                                 <a href="" className="btn btn-outline-light">Visit Site</a>
                             </div>
-                            <div className="col">
+                            <div className="col-lg-6 col-sm-12">
                                 <img src="images/work3.jpg" alt="screenshot"/>
                             </div>
                         </div>

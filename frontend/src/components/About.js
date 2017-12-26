@@ -31,10 +31,10 @@ class About extends Component {
                 </div>
                 <div className="container workplace">
                     <div className="row">
-                        <div className="col col-lg-8">
+                        <div className="col-lg-8 col-sm-12">
                             <img src="images/workplace.jpg" alt="workplace"/>
                         </div>
-                        <div className="col col-lg-4">
+                        <div className="col-lg-4 col-sm-12">
                             <h2 className="display-4">Trusted by organizations everywhere</h2>
                             <p>We've helped companies from all over the world make their web applications accessible.</p>
                             <a href="" className="btn btn-primary">Learn More</a>
@@ -44,17 +44,17 @@ class About extends Component {
                 
                 <div className="container gallery text-center">
                     <div className="row">
-                        <div className="col">
+                        <div className="col-log-4 col-sm-12">
                             <img src="http://via.placeholder.com/300x300" alt="gallery"/>
                             <img src="http://via.placeholder.com/300x300" alt="gallery"/>
                             <img src="http://via.placeholder.com/300x300" alt="gallery"/>
                         </div>
-                        <div className="col">
+                        <div className="col-log-4 col-sm-12">
                             <img src="http://via.placeholder.com/300x300" alt="gallery"/>
                             <img src="http://via.placeholder.com/300x300" alt="gallery"/>
                             <img src="http://via.placeholder.com/300x300" alt="gallery"/>
                         </div>
-                        <div className="col">
+                        <div className="col-log-4 col-sm-12">
                             <img src="http://via.placeholder.com/300x300" alt="gallery"/>
                             <img src="http://via.placeholder.com/300x300" alt="gallery"/>
                             <img src="http://via.placeholder.com/300x300" alt="gallery"/>
