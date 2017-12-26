@@ -11,7 +11,7 @@ class LeadForm extends Component {
     }
 
     handleEmailSubmit(event) {
-        if(true) {//validateEmail(this.state.email)) {
+        if(validateEmail(this.state.email)) {
             this.props.handleEmailSubmit(this.state.email);
         }        
         event.preventDefault();

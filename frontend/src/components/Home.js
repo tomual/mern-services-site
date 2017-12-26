@@ -35,6 +35,7 @@ class Home extends Component {
                     <div className="container screenie">
                         <div className="row">
                             <div className="col">
+                                <img src="images/screenshot.png" alt="screenshot"/>
                             </div>
                             <div className="col">
                                 <h2 className="display-2">We'll help you get to more people</h2>

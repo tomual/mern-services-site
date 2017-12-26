@@ -40,7 +40,7 @@ class Contact extends Component {
     render() {
         return (
             <div>
-                <div className="container">
+                <div className="container contact">
                     <div className="row">
                         <div className="col">
                             <h1>Contact</h1>

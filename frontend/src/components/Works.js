@@ -15,7 +15,7 @@ class Works extends Component {
     render() {
         return (
             <div>
-                <div className="container screenie text-center">
+                <div className="container works-hero text-center">
                     <div className="row">
                         <div className="col">
                             <h1 className="display-2">Here are our works</h1>
@@ -24,36 +24,45 @@ class Works extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="container trusted">
-                    <div className="row">
-                        <div className="col">
-                            <h2 className="display-4">Trusted by organizations everywhere</h2>
-                            <p>We've helped companies from all over the world make their web applications accessible.</p>
-                            <a href="" className="btn btn-primary">Learn More</a>
-                        </div>
-                        <div className="col">
-                        </div>
-                    </div>
-                </div>
-                <div className="container trusted">
-                    <div className="row">
-                        <div className="col">
-                            <h2 className="display-4">Trusted by organizations everywhere</h2>
-                            <p>We've helped companies from all over the world make their web applications accessible.</p>
-                            <a href="" className="btn btn-primary">Learn More</a>
-                        </div>
-                        <div className="col">
+                <div className="work work-one">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col">
+                                <h2 className="display-4">Northwest Computing Hosting Dashboard</h2>
+                                <p>We've helped companies from all over the world make their web applications accessible.</p>
+                                <a href="" className="btn btn-outline-light">Visit Site</a>
+                            </div>
+                            <div className="col">
+                                <img src="images/work1.jpg" alt="screenshot"/>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div className="container trusted">
-                    <div className="row">
-                        <div className="col">
-                            <h2 className="display-4">Trusted by organizations everywhere</h2>
-                            <p>We've helped companies from all over the world make their web applications accessible.</p>
-                            <a href="" className="btn btn-primary">Learn More</a>
+                <div className="work work-two">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col">
+                                <h2 className="display-4">G.E. Works Promotional Landing Page</h2>
+                                <p>We've helped companies from all over the world make their web applications accessible.</p>
+                                <a href="" className="btn btn-outline-light">Visit Site</a>
+                            </div>
+                            <div className="col">
+                                <img src="images/work2.jpg" alt="screenshot"/>
+                            </div>
                         </div>
-                        <div className="col">
+                    </div>
+                </div>
+                <div className="work work-three">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col">
+                                <h2 className="display-4">Association for the Blind Social Networking Site</h2>
+                                <p>We've helped companies from all over the world make their web applications accessible.</p>
+                                <a href="" className="btn btn-outline-light">Visit Site</a>
+                            </div>
+                            <div className="col">
+                                <img src="images/work3.jpg" alt="screenshot"/>
+                            </div>
                         </div>
                     </div>
                 </div>

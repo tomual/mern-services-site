@@ -16,34 +16,14 @@ class Services extends Component {
         return (
             <div>
                 <div className="container">
-                    <div className="jumbotron">
-                        <h1 className="display-1">Service One Header</h1>
+                    <div className="jumbotron jumbotron-services">
+                        <h1 className="display-2">Easily manage requirements</h1>
                         <p className="lead">We'll help your web application easy to read for a wider variety of people</p>
                         <LeadForm handleEmailSubmit={this.handleEmailSubmit} />
+                        <img src="images/screenshot.png" alt="screenshot"/>
                     </div>
                 </div>
-                <div className="container screenie">
-                    <div className="row">
-                        <div className="col">
-                        </div>
-                        <div className="col">
-                            <h2 className="display-2">We'll help you get to more people</h2>
-                            <p>We provide you with the steps to make your product more accessible.</p>
-                            <a href="" className="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div className="container trusted">
-                    <div className="row">
-                        <div className="col">
-                            <h2 className="display-2">Trusted by organizations everywhere</h2>
-                            <p>We've helped companies from all over the world make their web applications accessible.</p>
-                            <a href="" className="btn btn-primary">Learn More</a>
-                        </div>
-                        <div className="col">
-                        </div>
-                    </div>
-                </div>
+
                 <div className="container features">
                     <div className="row text-center">
                         <div className="col">
