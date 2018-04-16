@@ -19,7 +19,7 @@ A website for an organization that offers a product or service. Written using th
 ## Screenshots
 
 Home page
-![Home page](https://lh3.googleusercontent.com/TnZc2PorQ17UNTWsLWyHpsgoxcSxtX0pRMz0UN-AXhjnV-6xoSgMJXlJJ4mGlGtSdKkQzRS2TK-Ydilpv5SV3ubSz5qTK7O2_ittImLD=w1900-h981-rw-no)
+![Home page](http://tomual.com/images/blog/ss+(2017-12-26+at+01.33.17).png)
 
 Part of "About" page
-![About page](https://lh3.googleusercontent.com/JGhVYz-RzN457ZrMv2PSljHZGuqy1BUrL7QveWbzo67wDAGdxhaMyJrpfrUm1zFG3U_GmaAKZucTncVa9G31dRge9sQF179IHkndKINr=w1901-h979-rw-no)
+![About page](http://tomual.com/images/blog/ss+(2017-12-26+at+01.45.21).jpg)
